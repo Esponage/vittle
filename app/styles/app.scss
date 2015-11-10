@@ -1,0 +1,584 @@
+@import 'bourbon';
+// $visual-grid: true;
+@import 'neat';
+
+@import '~normalize.css/normalize.css';
+@import '~font-awesome/scss/font-awesome.scss';
+@import 'foundation';
+
+$size: 70px;
+$offsetAmount: 1.1;
+$transitionTime: 0.12s;
+
+.vid-div::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(222, 62, 61, 1);
+    opacity: .4;
+    z-index: -1;
+}
+.bgvid {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  visibility: visible;
+}
+.log-buttons {
+  display: block;
+}
+.go-button {
+  background-color: rgba(0, 112, 149, .8);
+  width: 100%;
+  height: 60px;
+  font-family: "Poiret One";
+  font-size: 1.5rem;
+  margin: auto;
+  display: table-cell;
+  vertical-align: bottom;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0;
+}
+
+.top-nav {
+  max-width: 100%;
+  height: 50px;
+  background-color: rgba(222, 62, 61, .8);
+  border-bottom: 1px solid rgba(230, 230, 230, 1);
+}
+
+.top-nav2 {
+  max-width: 100%;
+  height: 50px;
+  background-color: rgba(252, 252, 252, 1);
+  border-bottom: 1px solid rgba(230, 230, 230, 1);
+}
+
+.fa-search {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: rgba(222, 62, 61, .8);
+}
+
+.search-button {
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: 0;
+  background: transparent;
+
+    &:focus,
+    &:hover,
+    &active {
+      background: transparent;
+    }
+}
+
+.profile-button {
+  height: 50px;
+  width: 1px;
+  margin-bottom: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: transparent;
+
+  &:focus,
+  &:hover,
+  &active {
+    background: transparent;
+  }
+}
+
+.fa-user {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: rgba(222, 62, 61, .8);
+}
+
+.randomize-button {
+  background: rgba(222, 62, 61, .8);
+  width: 15%;
+  height:0;
+  padding-bottom: 12%;
+  border-radius: 50%;
+  overflow:hidden;
+  position: fixed;
+  left: 41%;
+  bottom: 1%;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background: transparent;
+    background-color: rgba(222, 62, 61, .8);
+
+  }
+}
+
+// .container {
+//   background-color: rgba(222, 62, 61, .4);
+// }
+
+
+.profile-header {
+  height: 125px;
+  border-bottom: 2px solid rgba(230, 230, 230, 1);
+  background-color: white;
+}
+
+// .favorites-section {
+//   height: 50px;
+//   border-top: 1px solid rgba(230, 230, 230, 1);
+//   border-bottom: 1px solid rgba(230, 230, 230, 1);
+//   margin-top: 40px;
+//   background-color: white;
+// }
+
+.profile-pic {
+  background-repeat: no-repeat;
+   background-position: 50%;
+   border-radius: 50%;
+   width: 80px;
+   height: 80px;
+   border: 2px solid rgba(222, 62, 61, .8);
+   position: absolute;
+   top: 1%;
+   left: 40%;
+}
+
+.profile-name {
+  font-family: "Poiret One";
+  font-size: 1.1rem;
+  font-weight: bolder;
+  text-align: center;
+  color: rgba(222, 62, 61, .8);
+  vertical-align: bottom;
+  position: relative;
+  top: 25%;
+  left: 1%;
+}
+
+.back-button {
+  background: transparent;
+  background-color: white;
+  width: 1em;
+  height: 1em;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background: transparent;
+    background-color: transparent;
+  }
+}
+
+.fa-times {
+  color: rgba(222, 62, 61, .8);
+  font-size: 1.4rem;
+  position: absolute;
+  top: 5px;
+  left: 15px;
+}
+
+.search-x {
+  color: white;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 13px;
+  right: 15px;
+}
+
+.sign-out-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  background-color: rgba(222, 62, 61, .8);
+  width: 100%;
+  height: 60px;
+  font-family: "Poiret One";
+  font-size: 1.5rem;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background: transparent;
+    background-color: rgba(222, 62, 61, .8);
+  }
+}
+//
+// input.search-box {
+//   width: 70%;
+//   margin-left: 5px;
+// }
+
+
+
+.x-button {
+  height: 50px;
+  width: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: 0;
+  background: transparent;
+
+    &:focus,
+    &:hover,
+    &active {
+      background: transparent;
+    }
+}
+
+input.search-box {
+  width: 78%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: none;
+  border: none;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  color: black;
+  margin-left: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+  margin-top: 6px;
+  -webkit-transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  -ms-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  transition: width 0.3s;
+  &:focus {
+    background-color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: rgba(128, 128, 128, 1);
+  }
+}
+
+
+
+body {
+  background-color: white;
+  z-index: -1;
+}
+
+ul.circle-list {
+  display: block;
+  margin: 50px auto 0;
+  width: $size;
+  height: $size;
+  padding: 0;
+  position: relative;
+  list-style: none;
+}
+
+.circles {
+  display: block;
+  width: $size;
+  height: $size;
+  background-color: rgba(222, 62, 61, .8);
+  border-radius: 50%;
+  opacity: 1;
+  mix-blend-mode: screen;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  transition: transform $transitionTime ease-out, opacity $transitionTime ease-out, color $transitionTime ease-out;
+  cursor: pointer;
+  text-align: center;
+  line-height: $size;
+  color: black;
+  font-family: 'fontawesome';
+  color: transparent;
+}
+
+.fa-star {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.fa-bell-o::before {
+  color: white;
+  font-size: 1.2rem;
+  position: relative;
+  top: 0;
+  left: 0;
+
+}
+
+.fa-user-plus::before {
+  color: white;
+  font-size: 1.2rem;
+
+}
+
+.fa-cutlery::before {
+  color: white;
+  font-size: 1.2rem;
+}
+
+
+.circles2 {
+  display: block;
+  width: $size;
+  height: $size;
+  background-color: rgba(222, 62, 61, .8);
+  border-radius: 50%;
+  opacity: 1;
+  mix-blend-mode: screen;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  transition: transform $transitionTime ease-out, opacity $transitionTime ease-out, color $transitionTime ease-out;
+  cursor: pointer;
+  text-align: center;
+  line-height: $size;
+  color: black;
+  font-family: 'fontawesome';
+  color: transparent;
+}
+
+.circles3 {
+  display: block;
+  width: $size;
+  height: $size;
+  background-color: rgba(222, 62, 61, .8);
+  border-radius: 50%;
+  opacity: 1;
+  mix-blend-mode: screen;
+  position: absolute;
+  top: 140px;
+  left: 0;
+  transition: transform $transitionTime ease-out, opacity $transitionTime ease-out, color $transitionTime ease-out;
+  cursor: pointer;
+  text-align: center;
+  line-height: $size;
+  color: black;
+  font-family: 'fontawesome';
+  color: transparent;
+}
+
+
+
+.circles4 {
+  display: block;
+  width: $size;
+  height: $size;
+  background-color: rgba(222, 62, 61, .8);
+  border-radius: 50%;
+  opacity: 1;
+  mix-blend-mode: screen;
+  position: absolute;
+  top: 220px;
+  left: 0;
+  transition: transform $transitionTime ease-out, opacity $transitionTime ease-out, color $transitionTime ease-out;
+  cursor: pointer;
+  text-align: center;
+  line-height: $size;
+  color: black;
+  font-family: 'fontawesome';
+  color: transparent;
+}
+
+ul >
+.r-name,
+.r-cuisine,
+.r-cost,
+.r-location,
+.r-rating {
+  list-style: none;
+  margin: 0;
+}
+
+.search-results-ul {
+  margin-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.r-name,
+.r-cuisine,
+.r-cost,
+.r-location,
+.r-rating,
+.r-address {
+  width: 100%;
+  font-family: "Poiret One";
+  font-weight: bold;
+}
+
+.r-address {
+  border-bottom: 1px solid rgba(222, 62, 61, .8);
+}
+
+.r-address {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+.deals {
+  margin-left: 0;
+}
+
+.bottom-deal {
+  border-bottom: 1px solid rgba(222, 62, 61, .8);
+}
+
+.fa-angle-right {
+  color: rgba(222, 62, 61, .8);
+  font-size: 1.4rem;
+  font-weight: bold;
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+
+
+.fa-angle-left {
+  color: rgba(222, 62, 61, .8);
+  font-size: 1.6rem;
+  font-weight: bold;
+  position: absolute;
+  top: 13px;
+  left: 15px;
+}
+
+.fa-map-marker {
+  color: rgba(222, 62, 61, 1);
+}
+
+.r-title {
+  color: rgba(222, 62, 61, 1);
+  font-family: "Poiret One";
+  font-weight: bold;
+}
+
+span {
+  color: black;
+  font-weight: bold;
+  font-family: "Poiret One";
+  font-size: .8rem;
+}
+
+.fa-cutlery {
+  color: rgba(222, 62, 61, .8);
+  font-family: "fontawesome";
+}
+
+.qrcode {
+  margin-left: 76px;
+  margin-top: 50px;
+}
+
+.qr-div {
+  background-color: rgba(222, 62, 61, .8);
+  // border: 2px solid pink;
+  width: 100%;
+  height: 627px;
+}
+
+// .qr-info {
+//   font-family: "Poiret One";
+//   color: white;
+//   font-weight: bold;
+//   max-width: 100px;
+//   font-size: .8rem;
+//   margin-left: 150px;
+//   // -webkit-transform: rotate(-35deg);
+// }
+//
+// .qr-info2 {
+//   font-family: "Poiret One";
+//   color: white;
+//   font-weight: bold;
+//   max-width: 125px;
+//   font-size: .8rem;
+//   text-align: right;
+//   margin-left: 125px;
+//   // -webkit-transform: rotate(-35deg);
+// }
+
+.discount {
+  color: rgba(222, 62, 61, .8);
+  font-family: "Poiret One";
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.save-deal {
+  background-color: white;
+  width: 100%;
+  height: 60px;
+  font-family: "Poiret One";
+  font-size: 1.5rem;
+  margin: auto;
+  display: table-cell;
+  vertical-align: bottom;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0;
+  color: rgba(222, 62, 61, .8);
+  font-weight: bolder;
+
+  &:focus,
+  &:hover,
+  &active {
+    background-color: white;
+    background: white;
+    color: rgba(222, 62, 61, .8);
+  }
+}
+
+
+.cut {
+  color: rgba(222, 62, 61, .8);
+}
+
+.discount-deal {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 350px;
+  left: 37%;
+  background-color: white;
+}
+
+.dealio {
+  color: rgba(222, 62, 61, .8);
+  font-weight: bolder;
+  font-family: "Poiret One";
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 15px;
+}
