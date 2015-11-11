@@ -31,6 +31,7 @@ ReactDOM.render((
    <Route path="/" component={App}>
      <IndexRoute component={Index} onEnter={requireAuth} />
      <Route path="login" component={Login} onEnter={requireNotAuth} />
+     <Route path="index" component={Index} onEnter={requireAuth} />
      <Route path="search" component={Search} onEnter={requireAuth} />
      <Route path="profile" component={Profile} onEnter={requireAuth} />
      <Route path="restaurant" component={Restaurant} onEnter={requireAuth} />
