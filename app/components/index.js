@@ -50,6 +50,8 @@ handleSubmit(e) {
 },
 
 randomizeRestaurant(e) {
+  console.log("hello");
+
   e.preventDefault();
   var sample = _.sample(this.state.restaurants);
   console.log(sample);
