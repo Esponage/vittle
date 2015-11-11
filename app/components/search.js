@@ -58,7 +58,7 @@ var Search = React.createClass({
  render() {
    return (
      <div>
-         <div>
+         <div className="search-container">
            <form className="top-nav" onSubmit={this.handleSubmit}>
              <input type="search" className="search-box" placeholder="Find Food and Friends..." ref="search" />
            </form>
