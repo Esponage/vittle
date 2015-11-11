@@ -75,7 +75,7 @@ randomizeRestaurant(e) {
           <Link to="/profile"><button className="profile-button"><i className="fa fa-user"></i></button></Link>
           <Link to="/search"><button className="search-button"><i className="fa fa-search"></i></button></Link>
         </nav>
-        <button onClick={this.randomizeRestaurant} className="randomize-button">Random</button>
+        <button onClick={this.randomizeRestaurant} className="randomize-button"></button>
           {this.state.randomRest &&
             <li>{this.state.randomRest.restaurant.name}</li>
 
