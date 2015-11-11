@@ -50,9 +50,8 @@ handleSubmit(e) {
 },
 
 randomizeRestaurant(e) {
-  console.log("hello");
-
   e.preventDefault();
+  console.log(locations);
   var sample = _.sample(this.state.locations);
   console.log(sample);
   this.setState({
@@ -76,7 +75,7 @@ randomizeRestaurant(e) {
           <Link to="/profile"><button className="profile-button"><i className="fa fa-user"></i></button></Link>
           <Link to="/search"><button className="search-button"><i className="fa fa-search"></i></button></Link>
         </nav>
-        <button onCLick={this.randomizeRestaurant} className="randomize-button">Random</button>
+        <button onClick={this.randomizeRestaurant} className="randomize-button">Random</button>
           {this.state.randomRest &&
             <li>{this.state.randomRest.restaurant.name}</li>
 
