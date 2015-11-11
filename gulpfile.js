@@ -9,6 +9,7 @@ var HtmlPlugin        = require('html-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 var ModernizrPlugin   = require('modernizr-webpack-plugin');
 var WebpackDevServer  = require('webpack-dev-server');
+var CordovaPlugin     = require('webpack-cordova-plugin');
 
 var param             = require('jquery-param');
 
@@ -137,7 +138,12 @@ gulp.task("webpack:build", function(callback) {
       compress: {
         warnings: false
       }
-    })
+    }),
+    new CordovaPlugin({
+     config: 'config.xml',
+     src: 'index.html',
+     platform: 'ios'
+     })		     
   );
 
   // run webpack

@@ -51,8 +51,7 @@ handleSubmit(e) {
 
 randomizeRestaurant(e) {
   e.preventDefault();
-  console.log(locations);
-  var sample = _.sample(this.state.locations);
+  var sample = _.sample(this.locations);
   console.log(sample);
   this.setState({
     randomRest: sample
@@ -61,13 +60,13 @@ randomizeRestaurant(e) {
 
   render() {
     var hasLocations;
-    var locations;
     if (this.props.locations.length > 0) {
       hasLocations = true;
-      locations = _.map(this.props.locations.models[0].attributes.nearby_restaurants);
+      this.locations = _.map(this.props.locations.models[0].attributes.nearby_restaurants);
     } else {
       hasLocations = false;
     }
+
 
     return (
       <div>
@@ -82,7 +81,7 @@ randomizeRestaurant(e) {
           }
           {hasLocations &&
             <div>
-              {locations.map((result)=><div className="search-results" key={result.restaurant.R.res_id}><Link to={`/restaurant/${result.restaurant.id}`}><li className="r-name">{result.restaurant.name}</li> <li className="r-cuisine">{result.restaurant.cuisines}</li><li className="r-cost">{result.restaurant.currency}{result.restaurant.average_cost_for_two}</li>
+              {this.locations.map((result)=><div className="search-results" key={result.restaurant.R.res_id}><Link to={`/restaurant/${result.restaurant.id}`}><li className="r-name">{result.restaurant.name}</li> <li className="r-cuisine">{result.restaurant.cuisines}</li><li className="r-cost">{result.restaurant.currency}{result.restaurant.average_cost_for_two}</li>
             <li className="r-location">{result.restaurant.location.city}</li><li className="r-rating">{result.restaurant.user_rating.aggregate_rating}</li></Link><li className="r-address"><a className="fa fa-crosshairs" href=""></a></li></div> )}
             </div>
           }
