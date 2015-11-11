@@ -8,6 +8,7 @@ import UserCollection from './models/user-collection';
 import CommentsCollection from './models/comment-collection';
 import RestaurantCollection from './models/restaurant-collection';
 import Restaurant from './models/restaurant';
+import Location from './models/location';
 
 let session, users, comments;
 
@@ -18,6 +19,7 @@ let session, users, comments;
 // };
 //
 // searchResults();
+let location = new Location();
 
 let restaurant = new Restaurant();
 
@@ -68,6 +70,11 @@ var Store = _.extend({}, Backbone.Events, {
 
   getRestaurant() {
    return restaurant;
+ },
+
+ getLocation() {
+   console.log(location);
+   return location;
  }
 
 });
