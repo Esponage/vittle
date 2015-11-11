@@ -11,8 +11,8 @@
     <access origin="*" />
     <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />
 
-    <!-- Allow links to example.com -->
-    <allow-intent href="https://connect.facebook.net/en_US/sdk.js" />
+    Allow links to example.com -->
+    <!-- <allow-intent href="https://connect.facebook.net/en_US/sdk.js" />
     <!-- Allow geo: links to open maps -->
     <allow-intent href="geo:*" />
     <!-- Allow all unrecognized URLs to open installed apps
@@ -21,4 +21,4 @@
 
     <preference name="StatusBarOverlaysWebView" value="false" />
 
-</widget>
+</widget> -->
