@@ -53,7 +53,7 @@ randomizeRestaurant(e) {
   console.log("hello");
 
   e.preventDefault();
-  var sample = _.sample(this.state.restaurants);
+  var sample = _.sample(this.state.locations);
   console.log(sample);
   this.setState({
     randomRest: sample
