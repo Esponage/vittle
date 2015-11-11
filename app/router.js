@@ -14,6 +14,7 @@ import Qrcode from './components/qrcode';
 import store from './store';
 
 function requireAuth(nextState, replaceState) {
+  console.log('requireAuth', store.getSession().isAuthenticated());
  if( ! store.getSession().isAuthenticated() ) {
    replaceState({ nextPathname: nextState.location.pathname }, '/login');
  }
@@ -30,7 +31,6 @@ ReactDOM.render((
    <Route path="/" component={App}>
      <IndexRoute component={Index} onEnter={requireAuth} />
      <Route path="login" component={Login} onEnter={requireNotAuth} />
-     <Route path="index" component={Index} onEnter={requireAuth} />
      <Route path="search" component={Search} onEnter={requireAuth} />
      <Route path="profile" component={Profile} onEnter={requireAuth} />
      <Route path="restaurant" component={Restaurant} onEnter={requireAuth} />
