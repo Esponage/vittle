@@ -92,7 +92,7 @@ randomizeRestaurant(e) {
            <div>
              {this.locations.map((result)=>
 
-               <Link className="butts" to={`/restaurant/${result.restaurant.id}`}>
+               <Link className="butts" key={result.restaurant.R.res_id} to={`/restaurant/${result.restaurant.id}`}>
                 <div className="search-results clearfix" key={result.restaurant.R.res_id}>
                 <img className="dash-pic" src={result.restaurant.featured_image}></img>
                 <li className="r-name">{result.restaurant.name}</li>

@@ -37,8 +37,8 @@ var Search = React.createClass({
            <Link to="/index"><button className="x-button"><i className="fa fa-times search-x"></i></button></Link>
          </div>
                {this.state.restaurants.map((result) =>
-                 <Link className="butts" to={`/restaurant/${result.restaurant.id}`}>
-                 <div className="search-results clearfix" key={result.restaurant.R.res_id}>
+                 <Link className="butts" key={result.restaurant.R.res_id} to={`/restaurant/${result.restaurant.id}`}>
+                 <div className="search-results clearfix" >
                    <img className="dash-pic" src={result.restaurant.featured_image}></img>
                    <li className="r-name">{result.restaurant.name}</li>
                    <li className="fa-location-arrow r-location">{result.restaurant.location.city}</li>
