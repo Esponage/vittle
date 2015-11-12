@@ -623,10 +623,9 @@ span {
 
 .r-name-view {
   position: absolute;
-  position: absolute;
   font-family: "Roboto";
   color: white;
-  top: 175px;
+  top: 75px;
   left:  15px;
 }
 
@@ -668,8 +667,8 @@ span {
   padding: 20px;
   margin-right: 5px;
   z-index: 1;
-  position: absolute;
-  top: 360px;
+  position: relative;
+  top: 0;
 }
 
 .r-es {
