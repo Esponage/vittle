@@ -47,10 +47,11 @@ var Store = _.extend({}, Backbone.Events, {
   },
 
   getRestaurantCollection(model, search) {
-    return( new RestaurantCollection(model, {search: search}))
+    return( new RestaurantCollection(model, {search: search}));
   },
 
   searchRestaurants(search) {
+    console.log("else");
     restaurants.setSearch(search);
     restaurants.fetch();
   },

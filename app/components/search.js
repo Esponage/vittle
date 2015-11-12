@@ -28,7 +28,7 @@ var Search = React.createClass({
  render() {
    return (
      <div>
-         <div>
+         <div className="search-container">
            <form className="top-nav" onSubmit={this.handleSubmit}>
              <input type="search" className="search-box" placeholder="Find Food and Friends..." ref="search" />
            </form>
@@ -36,11 +36,17 @@ var Search = React.createClass({
          <div>
            <Link to="/index"><button className="x-button"><i className="fa fa-times search-x"></i></button></Link>
          </div>
-           <div className="is-searching not-searching">
-               {this.state.restaurants.map((result) => <div className="search-results" key={result.restaurant.R.res_id}><Link to={`/restaurant/${result.restaurant.id}`}><li className="r-name">{result.restaurant.name}</li> <li className="r-cuisine">{result.restaurant.cuisines}</li><li className="r-cost">{result.restaurant.currency}{result.restaurant.average_cost_for_two}</li>
-             <li className="r-location">{result.restaurant.location.city}</li><li className="r-rating">{result.restaurant.user_rating.aggregate_rating}</li></Link><li className="r-address"><a className="fa fa-crosshairs" href=""></a></li></div> )}
-       </div>
-     </div>
+               {this.state.restaurants.map((result) =>
+                 <Link className="butts" to={`/restaurant/${result.restaurant.id}`}>
+                 <div className="search-results clearfix" key={result.restaurant.R.res_id}>
+                   <img className="dash-pic" src={result.restaurant.featured_image}></img>
+                   <li className="r-name">{result.restaurant.name}</li>
+                   <li className="r-location">{result.restaurant.location.city}</li>
+                 </div>
+                </Link>
+
+              )}
+              </div>
    );
  }
 });
