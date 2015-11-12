@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, RouteHandler, Link} from 'react-router';
+import {Route, RouteHandler, Link, History} from 'react-router';
 import store from '../store';
 // import Search from '../components/search';
 import Backbone from 'backbone';
@@ -15,7 +15,7 @@ propTypes: {
  locations: React.PropTypes.object
 },
 
-mixins: [BackboneMixin],
+mixins: [BackboneMixin, History],
 
 getDefaultProps() {
  return {
@@ -50,6 +50,7 @@ handleSubmit(e) {
 },
 
 randomizeRestaurant(e) {
+<<<<<<< HEAD
  e.preventDefault();
  var sample = _.sample(this.locations);
  console.log(sample);
@@ -57,6 +58,16 @@ randomizeRestaurant(e) {
  this.setState({
    randomRest: sample
  })
+=======
+  e.preventDefault();
+  var sample = _.sample(this.locations);
+  console.log(sample);
+  // console.log(this.locations);
+  // this.setState({
+  //   randomRest: sample
+  // })
+  this.history.pushState({}, '/restaurant/' + sample.restaurant.id);
+>>>>>>> a02305c87226faa44ea8485e0a9cd783c7bba0e1
 },
 
  render() {
