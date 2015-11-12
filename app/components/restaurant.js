@@ -77,17 +77,14 @@ var Restaurant = React.createClass({
 
        <div className="r-view-im"><img className="dat-pic" src={restaurant.featured_image} /></div>
        <h1 className="r-name-view">{restaurant.name}</h1>
-       <h1 className="r-view-info cuisine-type">{restaurant.cuisines} | {restaurant.location.city}</h1>
 
        </div>
        {this.hasRestaurant &&
          <div className="other-stuff">
-           <h2 className="r-view-info">{restaurant.currency}{restaurant.average_cost_for_two}</h2>
-           <h1 className="r-view-info">Average Rating:{restaurant.user_rating.aggregate_rating}</h1>
-           <h1 className="r-view-info">{restaurant.user_rating.rating_text}</h1>
-           <h1 className="r-view-info">{restaurant.user_rating.votes}</h1>
+           <h1 className="r-view-info cuisine-type">{restaurant.cuisines} | {restaurant.location.city}</h1>
+           <h1 className="r-view-info ratings">User Rating: {restaurant.user_rating.aggregate_rating} | {restaurant.user_rating.rating_text}</h1>
+           <h2 className="r-view-info">Average Cost for Two: {restaurant.currency}{restaurant.average_cost_for_two}</h2>
            <h1 className="r-view-info">{restaurant.location.address}</h1>
-           <h1 className="r-view-info">{restaurant.location.zipcode}</h1>
          </div>
        }
 
