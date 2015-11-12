@@ -119,7 +119,7 @@ $transitionTime: 0.12s;
 }
 
 .randomize-button {
-  background: rgba(222, 62, 61, .8);
+  background: rgba(255, 255, 255, .8);
   width: 15%;
   height:0;
   padding-bottom: 12%;
@@ -128,14 +128,14 @@ $transitionTime: 0.12s;
   position: fixed;
   left: 41%;
   bottom: 1%;
-  border: 2px solid chartreuse;
+  border: 2px solid rgba(222, 62, 61, 1);
   z-index: 1;
 
   &:focus,
   &:hover,
   &:active {
     background: transparent;
-    background-color: rgba(222, 62, 61, .8);
+    background-color: rgba(255, 255, 255, .8);
 
   }
 }
@@ -330,7 +330,7 @@ ul.circle-list {
 
 }
 
-.fa-cutlery::before {
+.fa-beer::before {
   color: white;
   font-size: 1.2rem;
 }
@@ -414,16 +414,16 @@ li {
   list-style: none;
 }
 
-// .r-name,
-// .r-cuisine,
-// .r-cost,
-// .r-location,
-// .r-rating,
-// .r-address {
-//   width: 100%;
-//   font-family: "Poiret One";
-//   font-weight: bold;
-// }
+.r-name,
+.r-cuisine,
+.r-cost,
+.r-location,
+.r-rating,
+.r-address {
+  width: 100%;
+  font-family: "Roboto";
+  font-weight: 700;
+}
 
 .r-address {
   position: relative;
@@ -548,6 +548,8 @@ span {
   height: 200px;
   width: 100%;
   cursor: pointer;
+  background-color: rgba(134, 134, 134, .5);
+
 }
 
 // .feat-phot {
@@ -558,13 +560,22 @@ span {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  // background-color: rgba(0, 0, 0, 1);
-  opacity: 1;
   z-index: -1;
   width: 400px;
   height: 200px;
 }
 
+
+
+.fork {
+  color: rgba(222, 62, 61, .8);
+  font-size: 1.6rem;
+  text-align: center;
+  position: relative;
+  right: 10px;
+  top: 2px;
+  z-index: 1;
+}
 
 .r-name,
 .r-location {

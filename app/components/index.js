@@ -50,7 +50,6 @@ handleSubmit(e) {
 },
 
 randomizeRestaurant(e) {
-<<<<<<< HEAD
  e.preventDefault();
  var sample = _.sample(this.locations);
  console.log(sample);
@@ -58,7 +57,6 @@ randomizeRestaurant(e) {
  this.setState({
    randomRest: sample
  })
-=======
   e.preventDefault();
   var sample = _.sample(this.locations);
   console.log(sample);
@@ -67,7 +65,6 @@ randomizeRestaurant(e) {
   //   randomRest: sample
   // })
   this.history.pushState({}, '/restaurant/' + sample.restaurant.id);
->>>>>>> a02305c87226faa44ea8485e0a9cd783c7bba0e1
 },
 
  render() {
@@ -86,7 +83,7 @@ randomizeRestaurant(e) {
          <Link to="/profile"><button className="profile-button"><i className="fa fa-user"></i></button></Link>
          <Link to="/search"><button className="search-button"><i className="fa fa-search"></i></button></Link>
        </nav>
-       <button onClick={this.randomizeRestaurant} className="randomize-button">Random</button>
+       <button onClick={this.randomizeRestaurant} className="randomize-button"><i className="fa fa-cutlery fork"></i></button>
          {this.state.randomRest &&
            <li>{this.state.randomRest.restaurant.name}</li>
 
