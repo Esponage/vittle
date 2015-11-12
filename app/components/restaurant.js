@@ -74,19 +74,20 @@ var Restaurant = React.createClass({
          <Link to="/index"><button className="x-button"><i className="fa fa-times search-x"></i></button></Link>
        </div>
        <div className="r-view-div">
-       <img className="dat-pic" src={restaurant.featured_image} />
+
+       <div className="r-view-im"><img className="dat-pic" src={restaurant.featured_image} /></div>
        <h1 className="r-name-view">{restaurant.name}</h1>
+       <h1 className="r-view-info cuisine-type">{restaurant.cuisines} | {restaurant.location.city}</h1>
+
        </div>
-       <h1>{restaurant.cuisines}</h1>
-       <h2>{restaurant.currency}{restaurant.average_cost_for_two}</h2>
        {this.hasRestaurant &&
-         <div>
-           <h1>Average Rating:{restaurant.user_rating.aggregate_rating}</h1>
-           <h1>{restaurant.user_rating.rating_text}</h1>
-           <h1>{restaurant.user_rating.votes}</h1>
-           <h1>{restaurant.location.address}</h1>
-           <h1>{restaurant.location.city}</h1>
-           <h1>{restaurant.location.zipcode}</h1>
+         <div className="other-stuff">
+           <h2 className="r-view-info">{restaurant.currency}{restaurant.average_cost_for_two}</h2>
+           <h1 className="r-view-info">Average Rating:{restaurant.user_rating.aggregate_rating}</h1>
+           <h1 className="r-view-info">{restaurant.user_rating.rating_text}</h1>
+           <h1 className="r-view-info">{restaurant.user_rating.votes}</h1>
+           <h1 className="r-view-info">{restaurant.location.address}</h1>
+           <h1 className="r-view-info">{restaurant.location.zipcode}</h1>
          </div>
        }
 

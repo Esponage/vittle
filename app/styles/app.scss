@@ -612,14 +612,42 @@ span {
   color: white;
 }
 
-// .r-name-view {
-//   z-index: 1;
-//   font-size: 1.7rem;
-//   color: white;
-//   font-weight: bolder;
-//   padding-left: 20px;
-//   font-family: "Roboto";
-//   position: absolute;
-//   top: 225px;
-//   left: 15px;
-// }
+.r-view-info {
+  z-index: 1;
+  // font-size: 1.7rem;
+  color: black;
+  font-weight: bolder;
+  padding-left: 20px;
+  font-family: "Roboto";
+}
+
+.r-name-view {
+  position: absolute;
+  position: absolute;
+  font-family: "Roboto";
+  color: white;
+  top: 175px;
+  left:  15px;
+}
+
+.cuisine-type {
+  font-family: "Roboto";
+  color: black;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.r-view-im img {
+  background-color: rgba(134, 134, 134, .5);
+}
+
+.r-view-loc {
+  font-family: "Roboto";
+  color: black;
+  font-size: 1rem;
+}
+
+span {
+  font-family: "Roboto";
+  font-size: 1rem;
+}
