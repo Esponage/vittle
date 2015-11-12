@@ -40,7 +40,8 @@ var Search = React.createClass({
                  <div className="search-results clearfix" key={result.restaurant.R.res_id}>
                    <img className="dash-pic" src={result.restaurant.featured_image}></img>
                    <li className="r-name">{result.restaurant.name}</li>
-                   <li className="r-location">{result.restaurant.location.city}</li>
+                   <li className="fa-location-arrow r-location">{result.restaurant.location.city}</li>
+                   <li className="r-cost"><i className="fa fa-crosshairs"></i></li>
                  </div>
                 </Link>
 

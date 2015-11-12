@@ -73,8 +73,10 @@ var Restaurant = React.createClass({
        <div>
          <Link to="/index"><button className="x-button"><i className="fa fa-times search-x"></i></button></Link>
        </div>
-       <img src={restaurant.featured_image} />
-       <h1>{restaurant.name}</h1>
+       <div className="r-view-div">
+       <img className="dat-pic" src={restaurant.featured_image} />
+       <h1 className="r-name-view">{restaurant.name}</h1>
+       </div>
        <h1>{restaurant.cuisines}</h1>
        <h2>{restaurant.currency}{restaurant.average_cost_for_two}</h2>
        {this.hasRestaurant &&

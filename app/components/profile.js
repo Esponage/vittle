@@ -31,7 +31,7 @@ var Profile = React.createClass ({
               <li className="fa-star circles"></li>
               <Link to="/deals"><li className="fa-bell-o circles2"></li></Link>
               <li className="fa-user-plus circles3"></li>
-              <li className="fa-cutlery circles4"></li>
+              <li className="fa-beer circles4"></li>
           </ul>
         </div>
         <div>
