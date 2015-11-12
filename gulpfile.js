@@ -139,12 +139,21 @@ gulp.task("webpack:build", function(callback) {
         warnings: false
       }
     }),
+<<<<<<< HEAD
 new CordovaPlugin({
   config: 'config.xml',
   src: 'index.html',
   platform: 'ios'
   })
 );
+=======
+    new CordovaPlugin({
+     config: 'config.xml',
+     src: 'index.html',
+     platform: 'ios'
+     })		     
+  );
+>>>>>>> 9a7a26c5111cbb404ad8cbbd3a52107de84223ca
 
   // run webpack
   webpack(prodConfig, function(err, stats) {
