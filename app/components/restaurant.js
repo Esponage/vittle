@@ -59,10 +59,12 @@ var Restaurant = React.createClass({
 
  render() {
    var restaurant = this.props.restaurant.toJSON()[0] || {};
-   if(restaurant.user_rating && restaurant.user_rating.aggregate_rating){
-     this.hasRestaurant = true;
-     console.log(restaurant.user_rating.aggregate_rating);
-   }
+   var user_rating = restaurant.user_rating || {};
+   var location = restaurant.location || {};
+  //  if(restaurant.user_rating && restaurant.user_rating.aggregate_rating){
+  //    this.hasRestaurant = true;
+  //    console.log(restaurant.user_rating.aggregate_rating);
+  //  }
    return (
      <div>
        <div>
@@ -79,16 +81,14 @@ var Restaurant = React.createClass({
        </div>
        <h1>{restaurant.cuisines}</h1>
        <h2>{restaurant.currency}{restaurant.average_cost_for_two}</h2>
-       {this.hasRestaurant &&
-         <div>
-           <h1>Average Rating:{restaurant.user_rating.aggregate_rating}</h1>
-           <h1>{restaurant.user_rating.rating_text}</h1>
-           <h1>{restaurant.user_rating.votes}</h1>
-           <h1>{restaurant.location.address}</h1>
-           <h1>{restaurant.location.city}</h1>
-           <h1>{restaurant.location.zipcode}</h1>
-         </div>
-       }
+       <div>
+         <h1>Average Rating:{user_rating.aggregate_rating}</h1>
+         <h1>{user_rating.rating_text}</h1>
+         <h1>{user_rating.votes}</h1>
+         <h1>{location.address}</h1>
+         <h1>{location.city}</h1>
+         <h1>{location.zipcode}</h1>
+       </div>
 
      </div>
    );
