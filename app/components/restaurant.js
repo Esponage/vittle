@@ -41,6 +41,22 @@ var Restaurant = React.createClass({
    console.log(search);
  },
 
+ handleFavorite(e) {
+   e.preventDefault();
+
+ },
+
+ handleUnfavorite(e) {
+   e.preventDefault();
+   store.unfavoriteRestaurant(restaurant)
+ },
+
+ isFavorited(restaurant) {
+   return _.some(this.state.favorites, (f) => {
+     return f.restaurant.objectId === restaurant.objectId;
+   })
+ },
+
  render() {
    var restaurant = this.props.restaurant.toJSON()[0] || {};
    if(restaurant.user_rating && restaurant.user_rating.aggregate_rating){
@@ -72,10 +88,11 @@ var Restaurant = React.createClass({
          </div>
        }
 
-
      </div>
    );
  }
 });
 
 export default Restaurant;
+
+// <button onClick={this.handleFavorite}>Favorite</button>

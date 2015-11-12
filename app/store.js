@@ -9,6 +9,7 @@ import CommentsCollection from './models/comment-collection';
 import RestaurantCollection from './models/restaurant-collection';
 import Restaurant from './models/restaurant';
 import Location from './models/location';
+// import FavoriteRestaurantsCollection from './models/favorite-restaurants-collection';
 
 let session, users, comments;
 
@@ -19,6 +20,8 @@ let session, users, comments;
 // };
 //
 // searchResults();
+// let favoriteRestaurant = new FavoriteRestaurantsCollection();
+
 let location = new Location();
 
 let restaurant = new Restaurant();
@@ -74,7 +77,28 @@ var Store = _.extend({}, Backbone.Events, {
  getLocation() {
    console.log(location);
    return location;
- }
+ },
+
+
+ getFavorites() {
+    return favorites.toJSON();
+ },
+
+ fetchFavorites() {
+   return favorites.toJSON();
+ },
+ //
+ // favoriteRestaurant(id, restaurant) {
+ //   favorites.create({
+ //     restaurant: {object.Id: restaurant.objectId}
+ //   }, wait: true)
+ // },
+ //
+ // unfavoriteRecipe() {
+ //   favorites.find((f) => {
+ //     return f.get('restaurant').objectId === restaurant.objectId
+ //   }).destroy();
+ // }
 
 });
 
