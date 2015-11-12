@@ -18,7 +18,7 @@ const Favorites = React.crateClass({
   render() {
     return (
         <h1>Favorites</h1>
-        {this.state.favorites.map((f) => <h2>{favorite.restaurant.name}</h2> )}
+        
     );
   }
 })

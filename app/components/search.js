@@ -24,6 +24,7 @@ var Search = React.createClass({
    let search = this.refs.search.value;
    store.searchRestaurants(search);
  },
+
  render() {
    return (
      <div>

@@ -59,10 +59,12 @@ var Restaurant = React.createClass({
 
  render() {
    var restaurant = this.props.restaurant.toJSON()[0] || {};
-   if(restaurant.user_rating && restaurant.user_rating.aggregate_rating){
-     this.hasRestaurant = true;
-     console.log(restaurant.user_rating.aggregate_rating);
-   }
+   var user_rating = restaurant.user_rating || {};
+   var location = restaurant.location || {};
+  //  if(restaurant.user_rating && restaurant.user_rating.aggregate_rating){
+  //    this.hasRestaurant = true;
+  //    console.log(restaurant.user_rating.aggregate_rating);
+  //  }
    return (
      <div>
        <div>
