@@ -563,6 +563,7 @@ span {
   z-index: -1;
   width: 400px;
   height: 200px;
+  border-bottom: 2px solid rgba(222, 62, 61, .8);
 }
 
 
@@ -577,10 +578,48 @@ span {
   z-index: 1;
 }
 
-.r-name,
-.r-location {
+.r-name {
   z-index: 1;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: white;
   font-weight: bolder;
+  margin-top: 100px;
+  padding-left: 15px;
 }
+
+.r-location {
+  z-index: 1;
+  font-size: 1rem;
+  color: white;
+  font-weight: bolder;
+  padding-left: 20px;
+  font-family: "Roboto";
+
+}
+
+.fa-location-arrow {
+  font-family: "fontawesome";
+  color: white;
+  font-size: .8rem;
+  margin-right: 2px;
+}
+
+.fa-crosshairs {
+  position: relative;
+  font-size: 1.1rem;
+  bottom: 20px;
+  left: 130px;
+  color: white;
+}
+
+// .r-name-view {
+//   z-index: 1;
+//   font-size: 1.7rem;
+//   color: white;
+//   font-weight: bolder;
+//   padding-left: 20px;
+//   font-family: "Roboto";
+//   position: absolute;
+//   top: 225px;
+//   left: 15px;
+// }
