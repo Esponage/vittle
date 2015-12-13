@@ -1,4 +1,4 @@
-This is Vittle, my final project at The Iron Yard.  It is an application meant for mobile built with React and Backbone.  The purpose of the app is to randomly suggest a restaurant based on the users location or to find deals at restaurants near them.
+This is Vittle, my final project at The Iron Yard.  It is a mobile application built with React and Backbone.  The purpose of the app is to randomly suggest a restaurant based on the users location or to find deals at restaurants near them.
 <br>
 <br>
 <br>
