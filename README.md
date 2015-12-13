@@ -1,61 +1,33 @@
-# react-webpack-scaffolding
-
-## How to get started
-
-1. Start your own project folder with a git clone then git init
-
-    ```sh
-    cd ~/Code/
-    hub clone jacobthemyth/react-webpack-scaffolding NEWPROJECT
-    cd NEWPROJECT
-    rm -rf .git
-    git init
-    git add .
-    git commit -m "Initial commit"
-    ```
-
-2. Install prerequisites
-
-    ```sh
-    npm install
-    ```
-
-3. Start watching for changes and develop it!
-
-    ```sh
-    gulp
-    ```
-
-## Usage
-
-### Images
-
-Images should be placed in `public/assets/images`
-
-#### In JS / JSX
-
-```jsx
-import mountains from 'assets/images/mountains.jpeg';
-
-var Thing = React.createClass({
-  render() {
-    return (
-      <img src={mountains} alt="Mountains" />
-    );
-  }
-});
-```
-
-#### In SCSS
-
-URLs are relative to `app.scss`
-
-```scss
-body {
-  background-image: url('../../public/assets/images/mountains.jpeg');
-}
-```
-
-## License
-
-MIT.
+This is Vittle, my final project at The Iron Yard.  It is an application meant for mobile built with React and Backbone.  The purpose of the app is to randomly suggest a restaurant based on the users location or to find deals at restaurants near them.
+<br>
+<br>
+<br>
+![alt tag](https://cloud.githubusercontent.com/assets/11448083/11759935/0132539c-a055-11e5-9b34-f6a00727dcd7.jpg)
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+![alt tag](https://cloud.githubusercontent.com/assets/11448083/11759937/07350744-a055-11e5-9365-a929b7db32fe.png)
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+![alt tag](https://cloud.githubusercontent.com/assets/11448083/11759942/14e2889e-a055-11e5-93e1-f479332ed7c1.png)
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+![alt tag](https://cloud.githubusercontent.com/assets/11448083/11759945/1a1d738c-a055-11e5-9069-27c65798b6c9.png)
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+![alt tag](https://cloud.githubusercontent.com/assets/11448083/11759946/1e85431e-a055-11e5-8fc0-2ecfd81cd5ec.png)
